@@ -31,4 +31,12 @@ describe '#scrabble_score' do
     expect(scrabble_score("q")).to eq 10
   end
 
+  it 'returns a scrabble score for a letter' do
+    expect(scrabble_score("flower")).to eq 12
+  end
+
+  it 'returns a scrabble score for a letter' do
+    expect(scrabble_score("supercalifragilisticexpialidocious")).to eq 56
+  end
+
 end
