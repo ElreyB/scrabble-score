@@ -27,9 +27,5 @@ def scrabble_score(word)
     "Q" => 10,
     "Z" => 10
   }
- total_score = 0
-  word.split("").each do |letter|
-    total_score += letter_score.fetch(letter.upcase)
-  end
-    total_score
+  word.split("").reduce(0){ |sum, letter| sum + letter_score.fetch(letter.upcase)}
 end
